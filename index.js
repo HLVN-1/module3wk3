@@ -28,4 +28,10 @@ request('https://jsonplaceholder.typicode.com/posts', (err, resp, body) => {
     const parsed = JSON.parse(body);
     parsed.forEach( (x) => console.log(x));
     // console.log(color.blue(parsed))
+    fs.writeFileSync('./newWebStuff.json', JSON.stringify(body));
 });
+
+// An example of printing JSON data as a string is:
+
+// JSON.stringify(parsed);
+// console.log(JSON.stringify(parsed))
